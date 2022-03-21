@@ -53,8 +53,11 @@ struct ContentView: View {
 			
 			Spacer()
 		}
-		
-		
+		.alert("Game over", isPresented: $showingResults){
+			Button("Play Again", action: reset)
+		} message: {
+			Text("Your score was \(score)")
+		}
 	}
 	func play(choice: Int) {
 		let winningMoves = [1, 2, 0]
