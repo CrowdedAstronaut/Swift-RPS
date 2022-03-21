@@ -13,6 +13,10 @@ struct ContentView: View {
 	@State private var computerChoice = Int.random(in: 0..<3)
 	@State private var shouldWin = Bool.random()
 	
+	@State private var score = 0
+	@State private var questionCount = 1
+	@State private var showingResults = false
+	
 	var body: some View {
 		VStack {
 			Spacer()
@@ -36,6 +40,7 @@ struct ContentView: View {
 				ForEach(0..<3) { number in
 					Button(moves[number]) {
 						// handle move tap
+						play(choice: number)
 					}
 					.font(.system(size: 80))
 				}
@@ -43,12 +48,43 @@ struct ContentView: View {
 			
 			Spacer()
 			
-			Text("Score: ???")
+			Text("Score:\(score)")
 				.font(.subheadline)
 			
 			Spacer()
 		}
 		
+		
+	}
+	func play(choice: Int) {
+		let winningMoves = [1, 2, 0]
+		let didWin: Bool
+
+		// more code to come
+		if shouldWin {
+			didWin = choice == winningMoves[computerChoice]
+		} else {
+			didWin = winningMoves[choice] == computerChoice
+		}
+		if didWin {
+			score += 1
+		} else {
+			score -= 1
+		}
+		
+		if questionCount == 10 {
+			showingResults = true
+		} else{
+			computerChoice = Int.random(in:0..<3)
+			shouldWin.toggle()
+			questionCount += 1
+		}
+	}
+	func reset() {
+		computerChoice = Int.random(in: 0..<3)
+		shouldWin = Bool.random()
+		questionCount = 0
+		score = 0
 	}
 }
 
