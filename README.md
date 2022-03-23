@@ -33,7 +33,7 @@ Guess The Flag is a native iPhone guessing game that helps users learn some of t
 
 Users should be able to:
 
-- Select between  "✊", "✋", * "✌️"
+- Select between  "✊", "✋", and "✌️"
 - User will have to alternate between choosing what wins and choosing what looses.
 - Get alerted and increase their score if they answer correctly
 - Get alerted and decrease their score if they answer incorrectly
