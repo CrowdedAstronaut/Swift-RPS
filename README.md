@@ -1,7 +1,5 @@
 # GuessTheFlag - 100 days of SwiftUI solution
 
-# Frontend Mentor - NFT preview card component solution
-
 - Solution URL: [Git Repo](https://github.com/CrowdedAstronaut/GuessTheFlag)
 
 This is a solution to the [Guess the flag challenge on 100 days of SwiftUI](https://www.hackingwithswift.com/100/swiftui/20).
@@ -35,7 +33,8 @@ Guess The Flag is a native iPhone guessing game that helps users learn some of t
 
 Users should be able to:
 
-- Select from a group of 3 different country flags
+- Select between  "✊", "✋", * "✌️"
+- User will have to alternate between choosing what wins and choosing what looses.
 - Get alerted and increase their score if they answer correctly
 - Get alerted and decrease their score if they answer incorrectly
 - Never be allowed to score below zero
@@ -47,7 +46,7 @@ Users should be able to:
 
 ### Mobile Preview
 
-![Mobile Preview](https://github.com/CrowdedAstronaut/GuessTheFlag/raw/main/gifs/guess_the_flag_preview.gif)
+![Mobile Preview](https://github.com/CrowdedAstronaut/Swift-RPS/raw/main/gifs/rps_preview.gif.gif)
 
 # Technologies <a name="technologies"></a>
 
